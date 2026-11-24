@@ -19,7 +19,7 @@ for (const name of actualFiles) {
   assert.ok(!/(^|\/)(?:node_modules|package(?:-lock)?\.json|ops\.env[^/]*)(\/|$)|\.(?:pem|key|p12|pfx|py|sh|ts|tsx)$/.test(name), `制品包含非静态或敏感文件：${name}`);
 }
 const required = ['index.html', 'index.rsc', '404.html', 'robots.txt', 'sitemap.xml',
-  'version.json', 'SHA256SUMS', '01player-company-logo.jpg', 'company-share-cover.jpg', 'qq-qr.png',
+  'version.json', 'SHA256SUMS', '01player-company-logo.jpg', '01player-banner.png', 'qq-qr.png',
   'wechat-qr.jpg', // 兼容服务器上尚未更新的发布健康检查；内容同为 QQ 二维码。
   'THIRD_PARTY_NOTICES.txt', 'licenses/Geist-OFL.txt',
   ...[1015, 1018, 1039, 1043, 1044].map((id) => `projects/${id}.jpg`)];
@@ -36,7 +36,7 @@ assert.ok(canonicalLink && new URL(canonicalLink).href === canonicalUrl, '首页
 assert.ok(readFileSync(join(root, 'robots.txt'), 'utf8').includes(`Sitemap: ${canonicalUrl}sitemap.xml`), 'robots sitemap 地址不正确');
 assert.ok(readFileSync(join(root, 'sitemap.xml'), 'utf8').includes(`<loc>${canonicalUrl}</loc>`), 'sitemap 地址不正确');
 assert.ok(html.includes('闽ICP备2026024313号-2'), '首页备案信息缺失');
-assert.match(html, /<meta property="og:image" content="https:\/\/www\.01player\.cn\/company-share-cover\.jpg"/, '分享封面未指向个人主页图片');
+assert.match(html, /<meta property="og:image" content="https:\/\/www\.01player\.cn\/01player-banner\.png"/, '分享封面未指向 GitHub 个人主页横幅');
 assert.ok(!html.includes('/_next/image?'), '静态站点不能依赖图片优化接口');
 assert.ok(!/https?:\/\/(?:fonts\.(?:googleapis|gstatic)\.com|picsum\.photos)/.test(html), '首页仍依赖远程字体或占位图');
 
