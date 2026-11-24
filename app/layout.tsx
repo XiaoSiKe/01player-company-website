@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     description: '从零到一，让人工智能真正落地！',
     images: [
       {
-        url: '/company-share-cover.jpg',
+        url: '/01player-banner.png',
         width: 1672,
-        height: 941,
-        alt: '来自零一扬个人主页的互动空间概念图',
+        height: 421,
+        alt: '零一玩家 01PLAYER 黑底白标横幅',
       },
     ],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '零一玩家智能科技',
     description: '从零到一，让人工智能真正落地！',
-    images: ['/company-share-cover.jpg'],
+    images: ['/01player-banner.png'],
   },
   icons: {
     icon: '/favicon.svg',
