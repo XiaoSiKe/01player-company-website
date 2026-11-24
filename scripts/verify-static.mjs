@@ -19,9 +19,8 @@ for (const name of actualFiles) {
   assert.ok(!/(^|\/)(?:node_modules|package(?:-lock)?\.json|ops\.env[^/]*)(\/|$)|\.(?:pem|key|p12|pfx|py|sh|ts|tsx)$/.test(name), `制品包含非静态或敏感文件：${name}`);
 }
 const required = ['index.html', 'index.rsc', '404.html', 'robots.txt', 'sitemap.xml',
-  'version.json', 'SHA256SUMS', '01yang-logo.jpg', 'qq-qr.png',
+  'version.json', 'SHA256SUMS', '01player-company-logo.jpg', 'qq-qr.png',
   'wechat-qr.jpg', // 兼容服务器上尚未更新的发布健康检查；内容同为 QQ 二维码。
-  'og.png',
   'THIRD_PARTY_NOTICES.txt', 'licenses/Geist-OFL.txt',
   ...[1015, 1018, 1039, 1043, 1044].map((id) => `projects/${id}.jpg`)];
 for (const file of required) assert.ok(existsSync(join(root, file)), `缺少制品：${file}`);
@@ -29,7 +28,13 @@ assert.ok(readFileSync(join(root, 'THIRD_PARTY_NOTICES.txt'), 'utf8').includes('
 assert.ok(readFileSync(join(root, 'licenses/Geist-OFL.txt'), 'utf8').includes('SIL OPEN FONT LICENSE Version 1.1'), '字体许可正文缺失');
 
 const html = readFileSync(join(root, 'index.html'), 'utf8');
-assert.ok(html.includes('福州零一扬网络科技有限公司'), '首页公司名称缺失');
+assert.ok(html.includes('零一玩家智能科技'), '首页公司名称缺失');
+assert.ok(!html.includes('零一扬网络科技'), '首页仍使用旧公司名');
+const canonicalUrl = 'https://www.01player.cn/';
+const canonicalLink = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+assert.ok(canonicalLink && new URL(canonicalLink).href === canonicalUrl, '首页 canonical 地址不正确');
+assert.ok(readFileSync(join(root, 'robots.txt'), 'utf8').includes(`Sitemap: ${canonicalUrl}sitemap.xml`), 'robots sitemap 地址不正确');
+assert.ok(readFileSync(join(root, 'sitemap.xml'), 'utf8').includes(`<loc>${canonicalUrl}</loc>`), 'sitemap 地址不正确');
 assert.ok(html.includes('闽ICP备2026024313号-2'), '首页备案信息缺失');
 assert.ok(!html.includes('/_next/image?'), '静态站点不能依赖图片优化接口');
 assert.ok(!/https?:\/\/(?:fonts\.(?:googleapis|gstatic)\.com|picsum\.photos)/.test(html), '首页仍依赖远程字体或占位图');

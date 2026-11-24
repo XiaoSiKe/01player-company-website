@@ -221,8 +221,8 @@ export default function Home() {
       </a>
 
       <PillNav
-        logo="/01yang-logo.jpg"
-        logoAlt="零一扬网络科技"
+        logo="/01player-company-logo.jpg"
+        logoAlt="零一玩家智能科技"
         items={navigation}
         activeHref={activeHref}
         ease="power2.easeOut"
@@ -256,10 +256,10 @@ export default function Home() {
           <div className="hero__content">
             <p className="hero__brand-pill" data-hero-reveal>
               <span aria-hidden="true">01</span>
-              FUZHOU 01YANG NETWORK TECHNOLOGY CO., LTD.
+              01PLAYER INTELLIGENT TECHNOLOGY
             </p>
             <h1 id="hero-title">
-              <StrokeDepthText text="福州零一扬网络科技有限公司" letterSpacing={-3.92} />
+              <StrokeDepthText text="零一玩家智能科技" letterSpacing={-3.92} />
             </h1>
             <p className="hero__slogan">
               <StrokeDepthText text="从零到一， 让人工智能真正落地！" letterSpacing={-3.11} />
@@ -305,10 +305,10 @@ export default function Home() {
                   <div className="about-panel__intro">
                     <h3 className="about-panel__title">从零到一，让人工智能真正落地！</h3>
                     <div className="about-panel__facts">
-                      <p><strong>零一扬网络科技成立于 2026 年 1 月 26 日，创始人：零一扬</strong></p>
+                      <p><strong>零一玩家智能科技成立于 2026 年 1 月 26 日，创始人：零一扬</strong></p>
                     </div>
                     <p>
-                      福州零一扬网络科技有限公司专注于 AI 应用与软件工程，
+                      零一玩家智能科技专注于 AI 应用与软件工程，
                       <br />
                       为企业及团队提供 SaaS 开发、AI 教育、模型 API 与 Token 支持、网络及云基础设施服务。
                     </p>
@@ -322,7 +322,7 @@ export default function Home() {
                   </div>
 
                   <h3 className="about-panel__subheading">我们在做什么？</h3>
-                  <div className="capability-grid" aria-label="零一扬的服务能力">
+                  <div className="capability-grid" aria-label="零一玩家智能科技的服务能力">
                     {capabilities.map((capability) => (
                       <article className="capability-card" key={capability.title}>
                         <h4>{capability.title}</h4>
@@ -385,7 +385,7 @@ export default function Home() {
                         <div className="contact__qr-frame">
                           <Image
                             src="/qq-qr.png"
-                            alt="零一扬 QQ 二维码"
+                            alt="公司商务 QQ 二维码"
                             width={920}
                             height={920}
                             sizes="(max-width: 720px) 280px, 320px"
@@ -417,7 +417,7 @@ export default function Home() {
 
               <footer className="footer">
                 <p>
-                  <span>© 2026 福州零一扬网络科技有限公司</span>
+                  <span>© 2026 零一玩家智能科技</span>
                   <a
                     className="footer__icp"
                     href="https://beian.miit.gov.cn/"

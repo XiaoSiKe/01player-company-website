@@ -30,7 +30,7 @@ class ArchiveTests(unittest.TestCase):
         return archive
 
     def check_case(self, extra=None, broken=False, valid=False):
-        with tempfile.TemporaryDirectory(prefix="01yang-archive-test-") as directory:
+        with tempfile.TemporaryDirectory(prefix="01player-archive-test-") as directory:
             target = pathlib.Path(directory) / "out"
             target.mkdir()
             archive = self.make_archive(directory, extra, broken)

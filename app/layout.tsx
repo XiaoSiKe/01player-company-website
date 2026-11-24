@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.01yang.space'),
+  metadataBase: new URL('https://www.01player.cn'),
   title: {
-    default: '福州零一扬网络科技有限公司｜从零到一，让人工智能真正落地',
-    template: '%s｜零一扬科技',
+    default: '零一玩家智能科技｜从零到一，让人工智能真正落地',
+    template: '%s｜零一玩家智能科技',
   },
   description:
-    '福州零一扬网络科技有限公司，提供 AI SaaS、AI 模型 API 聚合与接入、软件开发、网络服务与 AI 教育。',
+    '零一玩家智能科技，提供 AI SaaS、AI 模型 API 聚合与接入、软件开发、网络服务与 AI 教育。',
   keywords: ['AI SaaS', 'AI 模型 API', '软件开发', '网络服务', 'AI 教育', '福州'],
   alternates: {
     canonical: '/',
@@ -21,23 +21,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'zh_CN',
     url: '/',
-    siteName: '零一扬科技',
-    title: '福州零一扬网络科技有限公司',
+    siteName: '零一玩家智能科技',
+    title: '零一玩家智能科技',
     description: '从零到一，让人工智能真正落地！',
     images: [
       {
-        url: '/og.png',
-        width: 1200,
-        height: 630,
-        alt: '福州零一扬网络科技有限公司：从零到一，让人工智能真正落地',
+        url: '/01player-company-logo.jpg',
+        width: 512,
+        height: 512,
+        alt: '零一玩家智能科技：从零到一，让人工智能真正落地',
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: '福州零一扬网络科技有限公司',
+    card: 'summary',
+    title: '零一玩家智能科技',
     description: '从零到一，让人工智能真正落地！',
-    images: ['/og.png'],
+    images: ['/01player-company-logo.jpg'],
   },
   icons: {
     icon: '/favicon.svg',

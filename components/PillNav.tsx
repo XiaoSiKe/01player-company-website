@@ -25,7 +25,7 @@ type PillNavProps = {
 
 export default function PillNav({
   logo,
-  logoAlt = '零一扬网络科技',
+  logoAlt = '零一玩家智能科技',
   items,
   activeHref = '#home',
   className = '',

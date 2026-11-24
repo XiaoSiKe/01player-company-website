@@ -1,16 +1,15 @@
-# 零一扬网络科技 · 公司官网
+# 零一玩家智能科技 · 公司官网
 
-福州零一扬网络科技有限公司的官方网站源码，用于公司介绍、服务展示、项目预览与合作联系。
+零一玩家智能科技的官方网站源码，用于公司介绍、服务展示、项目预览与合作联系。
 
 > 从零到一， 让人工智能真正落地！
 
-- 公司全称：福州零一扬网络科技有限公司
-- 品牌名称：零一扬网络科技
-- 正式官网域名：[www.01yang.space](https://www.01yang.space)
+- 公司名称：零一玩家智能科技
+- 新官网域名：[www.01player.cn](https://www.01player.cn/)，待完成 DNS、TLS 与备案核验
 - 合作邮箱：[1241798750@qq.com](mailto:1241798750@qq.com)
-- GitHub 源码仓库：[XiaoSiKe/01yang-company-website](https://github.com/XiaoSiKe/01yang-company-website)
+- GitHub 源码仓库：[XiaoSiKe/01player-company-website](https://github.com/XiaoSiKe/01player-company-website)
 
-官网已于2026-08-28开放域名访问，裸域自动跳转到上述正式地址。源码已迁入公开仓库，完整提交历史保留；GitHub CI、主分支保护、云效自动发布与官网回滚均已验证。网站采用静态构建与阿里云 ECS 独立目录部署，备案网站名称待更新等运维事项统一见手册的交付记录。
+现网入口仍为 [www.01yang.space](https://www.01yang.space/)。站点采用静态构建与阿里云 ECS 独立部署。新域名切换和发布状态见[运维手册](docs/运维手册.md)。
 
 ## 页面与功能
 
