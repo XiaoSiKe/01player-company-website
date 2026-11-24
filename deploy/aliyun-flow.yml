@@ -3,8 +3,8 @@ name: 01yang-company-website-prod
 sources:
   website:
     type: git
-    name: 零一扬官网公共源码
-    endpoint: https://github.com/XiaoSiKe/01yang-company-website.git
+    name: 零一玩家智能科技官网源码
+    endpoint: https://github.com/XiaoSiKe/01player-company-website.git
     branch: main
     branchesFilter: ^main$
     triggerEvents:

@@ -10,6 +10,8 @@ if (!/^[a-f0-9]{40}$/.test(commit)) throw new Error('无法确定构建提交。
 // Vite 的服务端构建索引不是公开站点资源，可随构建重新生成。
 rmSync(join(root, '.vite'), { recursive: true, force: true });
 copyFileSync('THIRD_PARTY_NOTICES.md', join(root, 'THIRD_PARTY_NOTICES.txt'));
+// 保留旧版 ECS 发布健康检查所用的资源地址。
+copyFileSync(join(root, '01player-company-logo.jpg'), join(root, '01yang-logo.jpg'));
 
 writeFileSync(join(root, 'version.json'), `${JSON.stringify({
   commit,
